@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ucapan Rahasia</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #111;
+      color: #f5f5f5;
+      font-family: monospace;
+    }
+    #login {
+      text-align: center;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    input[type="password"] {
+      padding: 10px;
+      font-size: 16px;
+      background: #222;
+      border: 1px solid #888;
+      color: #f5f5f5;
+      border-radius: 5px;
+    }
+    button {
+      padding: 10px 20px;
+      margin-left: 10px;
+      background: #444;
+      color: #f5f5f5;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #666;
+    }
+    #messageBox {
+      display: none;
+      width: 80%;
+      max-width: 500px;
+      max-height: 70vh;      /* tinggi maksimal */
+      overflow-y: auto;      /* aktifkan scroll */
+      background: #222;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 15px rgba(255,255,255,0.3);
+      white-space: pre-line;
+      font-size: 18px;
+      color: #f8f8f8;
+      opacity: 0;
+      transform: scale(0.8);
+      animation: zoomIn 0.8s forwards ease-out;
+    }
+    /* Animasi teks glowing */
+    #messageBox span.glow {
+      text-shadow: 0 0 5px #fff, 0 0 10px #0ff, 0 0 20px #0ff;
+      animation: glowPulse 1.5s infinite alternate;
+    }
+    /* Custom scrollbar */
+    #messageBox::-webkit-scrollbar {
+      width: 8px;
+    }
+    #messageBox::-webkit-scrollbar-track {
+      background: #111;
+      border-radius: 10px;
+    }
+    #messageBox::-webkit-scrollbar-thumb {
+      background: #555;
+      border-radius: 10px;
+    }
+    #messageBox::-webkit-scrollbar-thumb:hover {
+      background: #888;
+    }
+    @keyframes glowPulse {
+      from { text-shadow: 0 0 5px #fff, 0 0 10px #0ff; }
+      to { text-shadow: 0 0 15px #0ff, 0 0 30px #0ff; }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes zoomIn {
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <!-- Halaman Login -->
+  <div id="login">
+    <h2>Enter the password</h2>
+    <input type="password" id="password" placeholder="Password" />
+    <button onclick="checkPassword()">Enter</button>
+    <p id="error" style="color:red;"></p>
+  </div>
+
+  <!-- Halaman Ucapan -->
+  <div id="messageBox"></div>
+
+  <!-- Musik Background -->
+  <audio id="bgMusic" src="wwd.mp3juice.blog - Delaney Bailey - Love Letter From The Sea to The Shore (320 KBps).mp3" preload="auto" loop></audio>
+
+  <script>
+    const correctPassword = "11september"; // ganti dengan passwordmu
+
+    function checkPassword() {
+      const input = document.getElementById("password").value;
+      const error = document.getElementById("error");
+      if (input === correctPassword) {
+        document.getElementById("login").style.display = "none";
+        const msgBox = document.getElementById("messageBox");
+        msgBox.style.display = "block";
+        msgBox.style.animation = "zoomIn 0.8s forwards ease-out";
+        document.getElementById("bgMusic").play();
+        typeMessage();
+      } else {
+        error.textContent = "Password salah!";
+      }
+    }
+
+    const message = "Haloo... \n\naku disini cuma mau ngucapin hbd buat kmu dan pengen ngasih salam perpisahan yang sebenernya ke kmu. \n\njadi yang pertama hbd dulu yaa, 🎂🥳HAPPY BIRTHDAY YA AMALIA FITRI ATAU IA, Semoga di hari spesialmu ini, semua kebahagiaan datang menghampiri, semua doa baik terkabul, dan semua harapan indah jadi kenyataan. Panjang umur, sehat selalu, diberi rezeki yang lancar, teman-teman yang tulus, serta keluarga yang penuh cinta, dan tentu aja semoga dapet cowo yang baik, tulus sama setia yaa sama ga toxic kayak aku. Semoga setiap langkahmu selalu dimudahkan, setiap perjuanganmu membuahkan hasil, dan setiap perjalananmu membawa pengalaman berharga. Jangan pernah lelah bermimpi, karena dunia ini luas dan banyak hal indah yang menantimu. Selamat menikmati hari spesialmu, semoga tahun ini lebih baik dari tahun sebelumnya. 🎉✨ udh sii ya itu aja ucapan hbd ku buat kmu, selanjutnya salam perpisahan yaa. \n\njadi aku disini ingin ngasih ucapan perpisahan ke kmu, kmu tau ga aku aslinya masih bener bener ngarep pengen balik sama kmu tapi aku harus sadar klo aku ga bisa terus mengharapkan sesuatu yang emg udh ga bisa terwujud, kmu sekarang udh ga butuh aku jadi aku juga gamau maksain diri buat balik lagi, nanti takutnya aku malah marah marah ga jelas kayak kemaren dan aku gamau kayak gitu lagi, aku gamau nyakitin kmu lagi udh cukup aku nyakitin hati kmu sewktu kita masih bareng jadi udh cukup lah ya, buat akhir kayak gini aku mau ngasih yang manis manis aja, btw asal kamu tau aku aja sampe sering stalk ig kmu bahkan kadang ig kelas gara2 saking kangennya sama kmu, jadi aku minta maaf ya klo udh bikin kmu risih aku janji ga bakal begitu lagi abis ini, mulai detik ini aku ga bakal nyentuh apapun yang ada kaitannya sama kmu, asal kmu tau aku juga gamau main ml lagi soalnya klo main ml tuh bawaannya keinget kmu terus jadi aku keknya ga bakal nyentuh lagi game yang namanya ml tuh walau sekarang aku pengen banget maen tapi aku tahan tahan gara2 aku gamau keinget sama kmu terus aku gangguin hidup kmu lagi, cukup sekali aja aku maksa buat masuk ke hidup dan ganggu hidup kmu, aku gamau kayak gitu lagi, kmu juga udh punya banyak temen baik kan di rl jadi selamat yaa, aslinya aku kepo tau apa kmu udh punya crush ya di rl? makanya kmu udh ga ada rasa lagi buat chat sama aku, tapi aku gapapa aku udh nerima semuanya aku udh ikhlas sama kmu aku udh rela klo pun kmu emg udh ada crush sama cowo, klo kmu ga ada crush sama cowo laen aku minta maaf ya udh nethink ke kmu emg bawaannya suka nethink, kmu pasti juga ga suka kan di nethink in terus sama orang kayak aku jadi aku minta maaf buat terakhir kali yaa, semoga aja kmu bisa hidup lebih baik, lebih seru, lebih asik, lebih semuanya deh setelah ga sama aku, soalnya aku juga bakal move on dari kmu dan hidup lebih baik tanpa kmu, keknya ini pertama kali aku kecintaan gini deh ke cewe, aku bahkan mimpiin kmu 2 hari berturut turut anjir tapi ya okelah, cukup segitu aja ya yappingan ku yang terakhir kali buat kmu makasih buat semua kenangan indah yang udh kmu kasih ke aku, dan aku minta maaf buat semua rasa sakit yang pernah aku kasih ke kmu, udh yaa itu aja salam perpisahan dari aku. \nGoodbye. \n\n~Kael";
+    let i = 0;
+
+    function typeMessage() {
+      if (i < message.length) {
+        const box = document.getElementById("messageBox");
+        const char = message.charAt(i);
+        if (char !== " ") {
+          const span = document.createElement("span");
+          span.textContent = char;
+          span.classList.add("glow");
+          box.appendChild(span);
+        } else {
+          box.textContent += " ";
+        }
+        box.scrollTop = box.scrollHeight; // auto scroll ke bawah
+        i++;
+        setTimeout(typeMessage, 75); // kecepatan ketik (ms)
+      }
+    }
+  </script>
+</body>
+</html>
